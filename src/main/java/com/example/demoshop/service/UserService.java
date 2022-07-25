@@ -41,4 +41,9 @@ public class UserService {
 			} else return "PRODUCT NOT FOUND";
 		} else return "USER NOT FOUND";
 	}
+
+	public String delUser(Integer id) {
+		userRepository.deleteById(id);
+		return "OK";
+	}
 }
